@@ -28,15 +28,15 @@ public class TransactionApplication implements CommandLineRunner {
 		User user1 = new User();
 		user1.setName("kumar");
 		user1.setCity("ballwin");
-
-		User user2 = new User();
-		user2.setName("kumar1");
-		user2.setCity("ballwin1");
-
+//
+//		User user2 = new User();
+//		user2.setName("kumar1");
+//		user2.setCity("ballwin1");
+//
 		logger.info("Inserting 1-> {}", userRepository.save(user1));
-
-		logger.info("Inserting 2 -> {}", userRepository.save(user2));
-
+//
+//		logger.info("Inserting 2 -> {}", userRepository.save(user2));
+//
 		logger.info("All users -> {}", userRepository.findAll());
 
 	}
