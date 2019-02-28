@@ -24,26 +24,20 @@ public class TransactionApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		logger.info("Student id 10001 -> {}", userRepository.findById(10001L));
 
 		User user1 = new User();
-		user1.setId(1000L);
 		user1.setName("kumar");
 		user1.setCity("ballwin");
 
 		User user2 = new User();
-		user2.setId(1001L);
 		user2.setName("kumar1");
 		user2.setCity("ballwin1");
 
-		logger.info("Inserting -> {}", userRepository.save(user1));
+		logger.info("Inserting 1-> {}", userRepository.save(user1));
 
-		logger.info("Update 10003 -> {}", userRepository.save(user2));
-
-		logger.info("Single users -> {}", userRepository.findById(1000L));
+		logger.info("Inserting 2 -> {}", userRepository.save(user2));
 
 		logger.info("All users -> {}", userRepository.findAll());
-
 
 	}
 }
