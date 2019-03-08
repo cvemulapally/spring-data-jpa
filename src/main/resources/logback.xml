@@ -1,0 +1,10 @@
+<configuration>
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <layout>
+            <Pattern>userId: %X{userId} | sessionId: %X{sessionId} | requestId: %X{requestId} - %m%n</Pattern>
+        </layout>
+    </appender>
+    <root level="info">
+        <appender-ref ref="stdout" />
+    </root>
+</configuration>
