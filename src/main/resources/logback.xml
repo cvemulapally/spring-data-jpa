@@ -1,6 +1,9 @@
 <configuration>
     <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
-        <layout>
+        <append>true</append>
+        <layout class="com.logback.MaskingPatternLayout">
+            <patternsProperty>password|username</patternsProperty>
+            <mask>*****</mask>
             <Pattern>userId: %X{userId} | sessionId: %X{sessionId} | requestId: %X{requestId} - %m%n</Pattern>
         </layout>
     </appender>
